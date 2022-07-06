@@ -1,5 +1,8 @@
 https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/mobile/search/search{page}.xml
+https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_1.jpg
 https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_2.jpg
+https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_3.jpg
+https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_4.jpg
 https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/flash/pages/page{page}_s.png
 https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-vectorlayers/{page}.svg
 https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/textblocks/page{page}.xml

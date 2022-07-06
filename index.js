@@ -9,7 +9,7 @@ var links = fs.readFileSync("./links.txt").toString().split("\n");
 
 if(!fs.existsSync(path.join(__dirname, "downloads/"))) fs.mkdirSync(path.join(__dirname, "downloads/"));
 
-var bookToDownload = "PAR48DF";
+var bookToDownload = process.argv.slice(2).join("");
 var dirpath = path.join(__dirname, "downloads/", bookToDownload);
 if(!fs.existsSync(dirpath)) fs.mkdirSync(dirpath);
 

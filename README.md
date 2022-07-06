@@ -21,6 +21,7 @@ npm install
 ```
 node index.js CAR46DF
 ```
+* Check the files downloaded properly. This can be done by opening one of the xml files. If they have any error code such as "403 access denied", then the download failed. Open the file in a text editor to see the error message.
 * Convert to a PDF file using the other script
 ```
 node merge-pdf.js CAR46DF
