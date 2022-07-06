@@ -56,3 +56,4 @@ Click on any request beginning in "page", then click "Headers" on the box that p
 
 ### Step 6
 Paste the text into a new file called cookies.txt in the `cgp-download` directory.
+![Step 6](https://raw.githubusercontent.com/TheJoeCoder/cgp-download/master/docs-images/step6.png)
