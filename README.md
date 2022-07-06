@@ -31,4 +31,21 @@ node merge-pdf.js CAR46DF
 Go to the CGP website and sign into your account, then go to [this link](https://www.cgpbooks.co.uk/bookspacedemo) or click the "My Online Products" link at the top of the page.
 
 ### Step 2
-Go onto the book you want to download by (on older books) clicking on it or (on newer books) by clicking on it and pressing "Book".
+Go onto the book you want to download by (on older books) clicking on it or (on newer books) by clicking on it and clicking "Book".
+![Step 2](https://raw.githubusercontent.com/TheJoeCoder/cgp-download/master/docs-images/step2.png)
+
+### Step 3
+Press F12 or Right Click -> Inspect. What you see will vary on different browsers but it should be something like below. Then, click on the "Network" tab.
+![Step 3](https://raw.githubusercontent.com/TheJoeCoder/cgp-download/master/docs-images/step3.png)
+
+### Step 4
+Check the "Preserve log" and "Disable cache" box then reload the page. You should see request entries populate below.
+![Step 4](https://raw.githubusercontent.com/TheJoeCoder/cgp-download/master/docs-images/step4.png)
+
+### Step 5
+Click on any request beginning in "page", then click "Headers" on the box that pops up. Find the "cookie" header, then right click on the value and press "Copy Value".
+![Step 5](https://raw.githubusercontent.com/TheJoeCoder/cgp-download/master/docs-images/step5.png)
+![Step 5](https://raw.githubusercontent.com/TheJoeCoder/cgp-download/master/docs-images/step5-copyvalue.png)
+
+### Step 6
+Paste the text into a new file called cookies.txt in the `cgp-download` directory.
