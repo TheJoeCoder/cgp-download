@@ -5,6 +5,12 @@ This software is provided for the sole purpose of personal use of offline copies
 ## Introduction
 This is a simple script to download all images from CGP books and then combine them into a PDF file for offline use. It downloads the files directly from the CGP website, so it requires a login cookie of a user which has purchased the requested book. Unfortunately, I do not own all of the books, so if you have any books to add to the books.json file, please create a pull request!
 
+## Todo
+This software is in beta, so some features don't exist yet. This includes:
+* Text in PDF files (the files are pretty usesless without it)
+* PDF metadata
+* More validation statements and f**k-up protection (it's incredibly shoddy code at the moment)
+
 ## Usage
 * Install NodeJS (there are tutorials on how to do this; just search "how to install nodejs" on google)
 * Open a new command prompt and clone the repo
