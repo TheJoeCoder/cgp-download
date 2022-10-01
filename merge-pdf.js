@@ -3,7 +3,6 @@ const path = require("path");
 const PDFDocument = require("pdfkit");
 const ProgressBar = require('progress');
 const SVGtoPDF = require("svg-to-pdfkit");
-const sharp = require("sharp");
 const { exit } = require("process");
 const { error, log } = require("console");
 
@@ -21,6 +20,10 @@ if(!fs.existsSync(dirpath)) {
     exit(1);
 }
 
+if(!fs.existsSync(path.join(__dirname, "converted/"))) fs.mkdirSync(path.join(__dirname, "converted/"));
+var convertpath = path.join(__dirname, "converted/", bookToMerge);
+if(!fs.existsSync(convertpath)) fs.mkdirSync(convertpath);
+
 var doc = new PDFDocument({size: "A4"});
 doc.pipe(fs.createWriteStream(path.join(__dirname, "downloads/", bookToMerge + ".pdf")));
 
@@ -29,14 +32,18 @@ new Promise((resolve, reject) => {
         var pagenum = i + 1;
         var pagenum_padded = pagenum.toLocaleString('en-GB', {minimumIntegerDigits:4,useGrouping:false});
         var imagePath = path.join(dirpath, "page" + pagenum_padded + "_4.jpg");
-        var vectorPath = path.join(dirpath, pagenum_padded + ".svg");
+        var vectorPath = path.join(convertpath, pagenum_padded + ".svg");
         var page = pagenum == 1 ? doc : doc.addPage({margin: 0, size: "A4"});
         if(fs.existsSync(imagePath)) page.image(imagePath, 0, 0, {align: "left", valign: "top", fit: [595.28, 841.89]});
-        //if(fs.existsSync(vectorPath)) page.addSVG(vectorPath, 0, 0, {align: "left", valign: "top", fit: [595.28, 841.89]});
+        var parser = new DOMParser();
+        var svgelement = parser.parseFromString(fs.readFileSync(vectorPath).toString(), "image/svg+xml");
+        if(fs.existsSync(vectorPath)) page.addSVG(fs.readFileSync(vectorPath).toString(), 0, 0, {align: "left", valign: "top", fit: [595.28, 841.89], width: 595.28, height: 841.89, useCSS: true});
         if(i == (bookInfo[bookToMerge].pages - 1)) resolve();
     }
 }).then(() => {
     doc.end();
 });
+
+
 
 

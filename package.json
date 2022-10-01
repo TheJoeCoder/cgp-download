@@ -9,8 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "convert-svg-to-png": "^0.6.4",
+    "fs-extra": "^10.1.0",
     "pdfkit": "^0.13.0",
     "progress": "^2.0.3",
+    "replace-in-file": "^6.3.5",
     "request": "^2.88.2",
     "svg-to-pdfkit": "^0.1.8"
   }
