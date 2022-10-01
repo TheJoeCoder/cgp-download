@@ -35,8 +35,6 @@ new Promise((resolve, reject) => {
         var vectorPath = path.join(convertpath, pagenum_padded + ".svg");
         var page = pagenum == 1 ? doc : doc.addPage({margin: 0, size: "A4"});
         if(fs.existsSync(imagePath)) page.image(imagePath, 0, 0, {align: "left", valign: "top", fit: [595.28, 841.89]});
-        var parser = new DOMParser();
-        var svgelement = parser.parseFromString(fs.readFileSync(vectorPath).toString(), "image/svg+xml");
         if(fs.existsSync(vectorPath)) page.addSVG(fs.readFileSync(vectorPath).toString(), 0, 0, {align: "left", valign: "top", fit: [595.28, 841.89], width: 595.28, height: 841.89, useCSS: true});
         if(i == (bookInfo[bookToMerge].pages - 1)) resolve();
     }
