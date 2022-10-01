@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page</title>
+    <style>
+        body, .bg, .fg {
+            width: PAGE_WIDTH;
+            height: PAGE_HEIGHT;
+        }
+        .bg, .fg {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+        .bg {
+            z-index: 1;
+        }
+        .fg {
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <img src="IMAGE_SUBSTRATE_FILE" alt="Image Substrate" class="bg">
+    <object data="SVG_FILE" type="image/svg+xml" class="fg"></object>
+</body>
+</html>
