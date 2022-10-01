@@ -11,7 +11,7 @@ if(!fs.existsSync(path.join(__dirname, "downloads/"))) fs.mkdirSync(path.join(__
 
 var bookToDownload = process.argv.slice(2).join("");
 var dirpath = path.join(__dirname, "downloads/", bookToDownload);
-if(!fs.existsSync(dirpath)) fs.mkdirSync(dirpath);
+if(!fs.existsSync(dirpath)) fs.mkdirSync(dirpath, {recursive: true});
 
 var numPages = bookInfo[bookToDownload].pages;
 
@@ -30,7 +30,7 @@ for(var i = 0; i < numPages; i++) {
             var link = links[j];
             var url = link.replace("{id}", bookToDownload).replace("{page}", pagenum_padded);
             var filepath = path.join(__dirname, "/downloads/", bookToDownload, "/", path.basename(url));
-            var file = fs.createWriteStream(filepath);
+            var file = fs.createWriteStream(filepath, {flags: "w"});
             let stream = request({
                 uri: url,
                 headers: {
