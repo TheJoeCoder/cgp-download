@@ -23,7 +23,7 @@ cd cgp-download
 ```
 npm install
 ```
-* Run the software, replacing CAR46DF with the id of the book you want to download (this can be found in the URL of the web book or in the `books.json` file)
+* Run the software, replacing CAR46DF with the id of the book you want to download (this can be found in the URL of the web book or in the `books.json` file). If the book doesn't exist in the `books.json` file, then add it following the section below (titled "Adding a book").
 ```
 node download.js CAR46DF
 ```
@@ -57,3 +57,54 @@ Click on any request beginning in "page", then click "Headers" on the box that p
 ### Step 6
 Paste the text into a new file called cookies.txt in the `cgp-download` directory.
 ![Step 6](https://raw.githubusercontent.com/TheJoeCoder/cgp-download/master/docs-images/step6.png)
+
+## Adding a book
+If your book doesn't already exist in the `books.json` file, you can add it following these instructions.
+### Step 1
+Go to the book you want to add via the method above, and find the ID in the url.
+For example, for the URL `https://library.cgpbooks.co.uk/digitalaccess/BAR46DF/Online/`, the ID is `BAR46DF`.
+
+### Step 2
+Find the number of pages. This can be done by going to the book and opening Inspect Element on the network tab (as above), then typing in "BC" to the `you are here` box, and pressing enter (or, instead of typing "BC", you can flip to the back cover page). Then, look in the network tab for the page png files.
+
+Example:
+```
+...
+page0005_2.png?uni=abc123
+page0152_2.png?uni=abc123
+page0151_2.png?uni=abc123
+page0149_2.png?uni=abc123
+...
+```
+Find the largest number in the list of files; for this book 152 is the largest and is therefore the number of pages.
+
+### Step 3
+Find the page size. The easiest way to do this is to measure the physical book and compare it to the nearest page size for precise measurements. For us, the pixels are converted as 72ppi, so multiply your measurement (in inches) by 72.
+I also strongly recommend using a dimension already present in the file. For example, most CGP Revision guides are A4 size (595.2758px x 841.8898px), and most of the textbooks are 544.252px x 722.835px.
+
+### Step 4
+Now, insert this all into the file.
+Insert this into the bottom of the file before the ending `}`, filling in the information you got earlier and being sure to add a comma on the previous line as well.
+```json
+    "BOOKID": {
+        "name": "BOOK NAME",
+        "pages": PAGES,
+        "pageWidth": WIDTH,
+        "pageHeight": HEIGHT
+    }
+```
+
+The end of file should now look similar to this (but with your book's data in):
+```
+...
+    },
+    "BOOKID": {
+        "name": "Book name",
+        "pages": pages,
+        "pageWidth": width,
+        "pageHeight": height
+    }
+}
+```
+
+Now, submit a pull request to add your book record to the collection! Please note this will not share the book itself with anyone else, just the metadata of it (so that other people don't have to spend time doing all the measurements themselves).
