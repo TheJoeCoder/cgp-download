@@ -22,7 +22,7 @@ if(!fs.existsSync(dirpath)) {
 
 if(!fs.existsSync(path.join(__dirname, "html/"))) fs.mkdirSync(path.join(__dirname, "html/"));
 var htmlpath = path.join(__dirname, "html/", bookToMerge);
-if(!fs.existsSync(convertpath)) fs.mkdirSync(convertpath);
+if(!fs.existsSync(htmlpath)) fs.mkdirSync(htmlpath);
 
 var template = fs.readFileSync(path.join(__dirname, "template.html")).toString();
 
@@ -36,4 +36,5 @@ for(var i = 0; i < bookInfo[bookToMerge].pages; i++) {
     file.replace(/PAGE_HEIGHT/g, bookInfo[bookToMerge].pageWidth);
     if(fs.existsSync(imagePath)) file.replace(/IMAGE_SUBSTRATE_FILE/g, "file:///" + imagePath);
     if(fs.existsSync(vectorPath)) file.replace(/SVG_FILE/g, "file:///" + vectorPath);
+    fs.writeFileSync(path.join(htmlpath, pagenum_padded + ".html"), file);
 }
