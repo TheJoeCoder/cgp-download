@@ -32,9 +32,11 @@ for(var i = 0; i < bookInfo[bookToMerge].pages; i++) {
     var imagePath = path.join(dirpath, "page" + pagenum_padded + "_4.jpg");
     var vectorPath = path.join(dirpath, pagenum_padded + ".svg");
     var file = template;
-    file.replace(/PAGE_WIDTH/g, bookInfo[bookToMerge].pageWidth);
-    file.replace(/PAGE_HEIGHT/g, bookInfo[bookToMerge].pageWidth);
-    if(fs.existsSync(imagePath)) file.replace(/IMAGE_SUBSTRATE_FILE/g, "file:///" + imagePath);
-    if(fs.existsSync(vectorPath)) file.replace(/SVG_FILE/g, "file:///" + vectorPath);
+    file = file.replace(/PAGE_WIDTH/g, bookInfo[bookToMerge].pageWidth);
+    file = file.replace(/PAGE_HEIGHT/g, bookInfo[bookToMerge].pageHeight);
+    //file = file.replace(/PAGE_R_WIDTH/g, Math.round(bookInfo[bookToMerge].pageWidth));
+    //file = file.replace(/PAGE_R_HEIGHT/g, Math.round(bookInfo[bookToMerge].pageHeight));
+    if(fs.existsSync(imagePath)) file = file.replace(/IMAGE_SUBSTRATE_FILE/g, "file:///" + imagePath);
+    if(fs.existsSync(vectorPath)) file = file.replace(/SVG_FILE/g, "file:///" + vectorPath);
     fs.writeFileSync(path.join(htmlpath, pagenum_padded + ".html"), file);
 }
