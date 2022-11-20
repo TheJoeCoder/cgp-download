@@ -1,9 +1,9 @@
 # CGP Download
 ## Disclaimer
-This software is provided for the sole purpose of personal use of offline copies of the CGP books. Follow the terms of service of CGP and do not distribute any copyrighted files downloaded by this program. All property downloaded remains the copyright of CGP or the respected author. The author of this software does not condone copyright infringement and will not take any responsibility for any actions of any user of this software.
+This software is provided for the sole purpose of personal use of offline and private copies of the CGP books. Do not distribute any copyrighted files downloaded by this program. All property downloaded remains the copyright of CGP or the respected author. The author of this software does not condone copyright infringement and will not take any responsibility for any actions of any user of this software. Please note that you can only download books you already own on the CGP Online platform with this software. Books which you do not own cannot be downloaded.
 
 ## Introduction
-This is a simple script to download all images from CGP books and then combine them into a PDF file for offline use. It downloads the files directly from the CGP website, so it requires a login cookie of a user which has purchased the requested book. Unfortunately, I do not own all of the books, so if you have any books to add to the books.json file, please create a pull request!
+This is a simple script to download all content from CGP books and then serve them as a private site or combine them into a PDF file for offline use. It downloads the files directly from the CGP website, so it requires a login cookie of a user which has purchased the requested book. Unfortunately, I do not own all of the books, so if you have any books to add to the books.json file, please create a pull request!
 
 ## Todo
 This software is in beta, so some features don't exist yet. This includes:
@@ -27,10 +27,14 @@ npm install
 ```
 node download.js CAR46DF
 ```
-* Check the files downloaded properly. This can be done by opening one of the xml files. If they have any error code such as "403 access denied", then the download failed. Open the file in a text editor to see the error message.
-* Convert to a PDF file using the other script (currently broken)
+* Check the files downloaded properly. This can be done by looking for corrupted images and files that are 0kb in size. If any of the images are corrupted or files empty, then delete them and run the program again. It won't download files that have already been downloaded.
+* EITHER Convert to a PDF file using the other script (currently broken)
 ```
 node merge-pdf.js CAR46DF
+```
+* OR Host a local web server to browse the books. Whatever you do, do NOT share this publicly (I don't know how litigious CGP's lawyers are, but they wouldn't be happy if you were to be found hosting this).
+```
+node cgp-server.js
 ```
 
 ## How to get cookies
