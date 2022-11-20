@@ -1,0 +1,50 @@
+[
+    {
+        "url":"https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/mobile/search/search{page}.xml",
+        "directory": "search"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_1.jpg",
+        "directory":"html5-substrates"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_2.jpg",
+        "directory":"html5-substrates"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_3.jpg",
+        "directory":"html5-substrates"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_4.jpg",
+        "directory":"html5-substrates"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/flash/pages/page{page}_s.png",
+        "directory": "thumbs"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-vectorlayers/{page}.svg",
+        "directory": "vectorlayers"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-textlayers/page{page}_1.png",
+        "directory": "textlayers"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-textlayers/page{page}_2.png",
+        "directory": "textlayers"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-textlayers/page{page}_3.png",
+        "directory": "textlayers"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-textlayers/page{page}_4.png",
+        "directory": "textlayers"
+    },
+    {
+        "url": "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/textblocks/page{page}.xml",
+        "directory": "textblocks"
+    }
+]
