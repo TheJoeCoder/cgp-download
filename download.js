@@ -43,6 +43,10 @@ function download(url) {
             .pipe(file)
             .on('finish', () => {
                 bar.tick(1);
+                //if(fs.statSync(filepath).size == 0) {
+                //    fs.unlinkSync(filepath);
+                //    console.log("Warning: Empty file " + filepath + " removed.");
+                //}
                 if(fs.readFileSync(filepath).length == 0) {
                     fs.unlinkSync(filepath);
                     //console.log("Zero length file " + filepath);
@@ -53,7 +57,9 @@ function download(url) {
                 }
                 //if(fs.readFileSync(filepath).toString().includes("<title>403 Access denied</title>")) fs.unlinkSync(filepath);
                 //console.log("✔️ " + url);
-                resolve();
+
+                // Delay before resolve to prevent files from not being written properly
+                setTimeout(resolve, 100); 
             })
             .on('error', (error) => {
                 bar.tick(1);
