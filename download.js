@@ -46,14 +46,21 @@ for(var i = 0; i < numPages; i++) {
             .pipe(file)
             .on('finish', () => {
                 bar.tick(1);
-                if(fs.readFileSync(filepath).length == 0) fs.unlinkSync(filepath);
-                if(fs.readFileSync(filepath).toString().includes("<Code>NoSuchKey</Code>")) fs.unlinkSync(filepath);
+                if(fs.readFileSync(filepath).length == 0) {
+                    fs.unlinkSync(filepath);
+                    console.log("Zero length file " + filepath);
+                }
+                if(fs.readFileSync(filepath).toString().includes("<Code>NoSuchKey</Code>")) {
+                    fs.unlinkSync(filepath);
+                    console.log("404 error " + filepath);
+                }
                 //if(fs.readFileSync(filepath).toString().includes("<title>403 Access denied</title>")) fs.unlinkSync(filepath);
                 //console.log("✔️ " + url);
                 resolve();
             })
             .on('error', (error) => {
                 bar.tick(1);
+                console.log("DL error for " + url + ": " + error);
                 reject(error);
             });
         }).catch((error) => {
