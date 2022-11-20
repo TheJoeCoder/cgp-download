@@ -65,8 +65,29 @@
     "CATB42DF": {
         "name": "Grade 9-1 GCSE Chemistry for AQA: Student Book with Online Edition",
         "pages": 384,
-        "pageWidth": 544.252,
-        "pageHeight": 722.835,
+        "pageWidth": 544.2518,
+        "pageHeight": 722.8348,
         "substrateformat": "png"
+    },
+    "PYAR74DF": {
+        "name": "AS and A-Level Psychology: AQA Complete Revision & Practice Online Edition",
+        "pages": 268,
+        "pageWidth": 595.2758,
+        "pageHeight": 841.8898,
+        "substrateformat": "jpg"
+    },
+    "EPR45DF": {
+        "name": "Romeo & Juliet - The Complete Play with Annotations, Audio and Knowledge Organisers Onl Ed",
+        "pages": 142,
+        "pageWidth": 544.2518,
+        "pageHeight": 694.4878,
+        "substrateformat": "jpg"
+    },
+    "EPJH41DF": {
+        "name": "The Strange Case of Dr Jekyll & Mr Hyde - The Complete Novel with Annotations & Knowledge Organisers",
+        "pages": 108,
+        "pageWidth": 365.6698,
+        "pageHeight": 561.2598,
+        "substrateformat": "jpg"
     }
 }
