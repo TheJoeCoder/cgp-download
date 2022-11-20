@@ -3,60 +3,70 @@
         "name": "GCSE Chemistry: AQA Revision Guide - Higher Level",
         "pages": 128,
         "pageWidth": 595.2758,
-        "pageHeight": 841.8898
+        "pageHeight": 841.8898,
+        "substrateformat": "jpg"
     },
     "PAR48DF": {
         "name": "GCSE Physics: AQA Revision Guide - Higher Level",
         "pages": 132,
         "pageWidth": 595.2758,
-        "pageHeight": 841.8898
+        "pageHeight": 841.8898,
+        "substrateformat": "jpg"
     },
     "MXHR47DF": {
         "name": "GCSE Edexcel Maths Revision Guide - Higher Level",
         "pages": 140,
         "pageWidth": 595.2758,
-        "pageHeight": 841.8898
+        "pageHeight": 841.8898,
+        "substrateformat": "jpg"
     },
     "GAR45DF": {
         "name": "GCSE Grade 9-1 AQA Geography Revision Guide",
         "pages": 148,
         "pageWidth": 595.2758,
-        "pageHeight": 841.8898
+        "pageHeight": 841.8898,
+        "substrateformat": "jpg"
     },
     "BAR46DF": {
         "name": "GCSE Biology: AQA Revision Guide - Higher Level",
         "pages": 152,
         "pageWidth": 595.2758,
-        "pageHeight": 841.8898
+        "pageHeight": 841.8898,
+        "substrateformat": "jpg"
     },
     "ETJH42DW": {
         "name": "New GCSE English Text Guide - Dr Jekyll and Mr Hyde includes Online Edition & Quizzes",
         "pages": 88,
         "pageWidth": 595.2758,
-        "pageHeight": 841.8898
+        "pageHeight": 841.8898,
+        "substrateformat": "jpg"
     },
     "ETBB42DW": {
         "name": "New GCSE English Text Guide - Blood Brothers includes Online Edition & Quizzes",
         "pages": 94,
         "pageWidth": 595.2758,
-        "pageHeight": 841.8898
+        "pageHeight": 841.8898,
+        "substrateformat": "jpg"
     },
     "ETR45DW": {
         "name": "New GCSE English Shakespeare Text Guide - Romeo & Juliet includes Online Edition & Quizzes",
         "pages": 98,
         "pageWidth": 595.2758,
-        "pageHeight": 841.8898
+        "pageHeight": 841.8898,
+        "substrateformat": "jpg"
     },
     "ACEHR42DF": {
         "name": "New GCSE English Edexcel Poetry Guide - Conflict Anthology Online Edition, Audio & Quizzes",
         "pages": 100,
         "pageWidth": 595.2758,
-        "pageHeight": 841.8898
+        "pageHeight": 841.8898,
+        "substrateformat": "jpg"
     },
     "CATB42DF": {
         "name": "Grade 9-1 GCSE Chemistry for AQA: Student Book with Online Edition",
         "pages": 384,
         "pageWidth": 544.252,
-        "pageHeight": 722.835
+        "pageHeight": 722.835,
+        "substrateformat": "png"
     }
 }

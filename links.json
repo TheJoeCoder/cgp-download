@@ -45,10 +45,10 @@
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/index.html"
     ],
     "pagedownloads": [
-        "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_1.jpg",
-        "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_2.jpg",
-        "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_3.jpg",
-        "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_4.jpg",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_1.{substrateformat}",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_2.{substrateformat}",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_3.{substrateformat}",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-html5-substrates/page{page}_4.{substrateformat}",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-textlayers/page{page}_1.png",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-textlayers/page{page}_2.png",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/common/page-textlayers/page{page}_3.png",
