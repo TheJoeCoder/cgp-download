@@ -2,7 +2,7 @@
     "titledownloads": [
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/workspace.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/index.html",
-        "https://library.cgpbooks.co.uk/digitalcontent/{id}/mobile/index.html?p={id}",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/mobile/index.html",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/html/skin/css/build.css",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/html/skin/images/lightsmoothb10.jpg",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/html/skin/templates.js",
