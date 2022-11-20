@@ -20,7 +20,7 @@ var bar = new ProgressBar('Downloading [:bar] :percent :current/:total :etas', {
 });
 
 function download(url) {
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
         var urlpath = url.replace(/^(https?:|)\/\//, "");
         var filename = path.basename(urlpath);
         var dirpath = path.join(__dirname, "downloads", urlpath.slice(0, urlpath.length - filename.length));
@@ -58,7 +58,7 @@ function download(url) {
                 //if(fs.readFileSync(filepath).toString().includes("<title>403 Access denied</title>")) fs.unlinkSync(filepath);
                 //console.log("✔️ " + url);
 
-                // Delay before resolve to prevent files from not being written properly
+                // Delay before resolve to prevent files from not being written properly (it doesn't work!)
                 setTimeout(resolve, 100); 
             })
             .on('error', (error) => {
@@ -75,22 +75,31 @@ function download(url) {
     });
 }
 
-//title-specific download
-for(var k = 0; k < links.titledownloads.length; k++) {
-    var link = links.titledownloads[k];
-    var url = link.replace(/\{id\}/g, bookToDownload);
-    download(url);
-}
+async function dodl(fast) {
+    //title-specific download
+    for(var k = 0; k < links.titledownloads.length; k++) {
+        var link = links.titledownloads[k];
+        var url = link.replace(/\{id\}/g, bookToDownload);
+        if(fast) download(url);
+        else await download(url);
+    }
 
-//page-specific download
-for(var i = 0; i < numPages; i++) {
-    var pagenum = i + 1;
-    var pagenum_padded = pagenum.toLocaleString('en-GB', {minimumIntegerDigits:4,useGrouping:false});
-    //for all links
-    for(var j = 0; j < links.pagedownloads.length; j++) {
-        var link = links.pagedownloads[j];
-        var url = link.replace(/\{id\}/g, bookToDownload).replace(/\{page\}/g, pagenum_padded);
-        //download file
-        download(url);
+    //page-specific download
+    for(var i = 0; i < numPages; i++) {
+        var pagenum = i + 1;
+        var pagenum_padded = pagenum.toLocaleString('en-GB', {minimumIntegerDigits:4,useGrouping:false});
+        //for all links
+        for(var j = 0; j < links.pagedownloads.length; j++) {
+            var link = links.pagedownloads[j];
+            var url = link
+                .replace(/\{id\}/g, bookToDownload)
+                .replace(/\{page\}/g, pagenum_padded)
+                .replace(/\{substrateformat\}/g, bookInfo[bookToDownload].substrateformat);
+            //download file
+            if(fast) download(url);
+            else await download(url);
+        }
     }
 }
+
+dodl(false);
