@@ -22,6 +22,8 @@
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/fonts/open-sans-v18-latin-ext_latin-800.woff",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/fonts/open-sans-v18-latin-ext_latin-800.woff2",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/build.js",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/index.js",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/polyfils.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/una.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/336badf11c10c021c958.module.wasm",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/0.js",
@@ -30,9 +32,16 @@
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/3.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/4.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/6.js",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/7.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/8.js",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/9.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/10.js",
-        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/12.js"
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/11.js",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/js/12.js",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/sound/blow.mp3",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/sound/flip2.mp3",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/sound/flip3.mp3",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/html/sound/flip4.mp3"
     ],
     "pagedownloads": [
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/mobile/search/search{page}.xml",
