@@ -10,8 +10,8 @@ var links = require("./links.json");
 if(!fs.existsSync(path.join(__dirname, "downloads/"))) fs.mkdirSync(path.join(__dirname, "downloads/"));
 
 var bookToDownload = process.argv.slice(2).join("");
-var dirpath = path.join(__dirname, "downloads/", bookToDownload);
-if(!fs.existsSync(dirpath)) fs.mkdirSync(dirpath, {recursive: true});
+//var dirpath = path.join(__dirname, "downloads/", bookToDownload);
+//if(!fs.existsSync(dirpath)) fs.mkdirSync(dirpath, {recursive: true});
 
 var numPages = bookInfo[bookToDownload].pages;
 
@@ -38,7 +38,7 @@ function download(url) {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246',
                     'Cookie': cookies
                 },
-                gzip: false
+                gzip: true
             })
             .pipe(file)
             .on('finish', () => {
