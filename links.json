@@ -7,6 +7,7 @@
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/html/skin/config.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/html/skin/templates.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/html/workspace.js",
+        "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/mobile/search/searchtext.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/cover300.jpg",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/pager.js",
         "https://library.cgpbooks.co.uk/digitalcontent/{id}/assets/workspace.js",
