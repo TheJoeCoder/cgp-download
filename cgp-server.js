@@ -27,7 +27,7 @@ app.get("/digitalcontent", (req, res) => {
     for(var i = 0; i < bookcontents.length; i++) {
         html += "<p>";
         html += "<a href=\"" + bookcontents[i] + "\">";
-        html += books[bookcontents[i]].name;
+        if(books[bookcontents[i]].name) html += books[bookcontents[i]].name;
         html += " (" + bookcontents[i] + ")";
         html += "</a>";
         html += "</p>";
