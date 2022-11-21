@@ -58,8 +58,7 @@ function download(url) {
                 //if(fs.readFileSync(filepath).toString().includes("<title>403 Access denied</title>")) fs.unlinkSync(filepath);
                 //console.log("✔️ " + url);
 
-                // Delay before resolve to prevent files from not being written properly (it doesn't work!)
-                setTimeout(resolve, 100); 
+                resolve();
             })
             .on('error', (error) => {
                 bar.tick(1);
@@ -93,8 +92,7 @@ async function dodl(fast) {
             var link = links.pagedownloads[j];
             var url = link
                 .replace(/\{id\}/g, bookToDownload)
-                .replace(/\{page\}/g, pagenum_padded)
-                .replace(/\{substrateformat\}/g, bookInfo[bookToDownload].substrateformat);
+                .replace(/\{page\}/g, pagenum_padded);
             //download file
             if(fast) download(url);
             else await download(url);
