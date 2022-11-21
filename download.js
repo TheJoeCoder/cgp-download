@@ -74,30 +74,32 @@ function download(url) {
     });
 }
 
-async function dodl(fast) {
+async function dodl(fast, titles, pages) {
     //title-specific download
+    if(titles)
     for(var k = 0; k < links.titledownloads.length; k++) {
-        var link = links.titledownloads[k];
-        var url = link.replace(/\{id\}/g, bookToDownload);
-        if(fast) download(url);
-        else await download(url);
+        var tlink = links.titledownloads[k];
+        var turl = tlink.replace(/\{id\}/g, bookToDownload);
+        if(fast) download(turl);
+        else await download(turl);
     }
 
     //page-specific download
+    if(pages)
     for(var i = 0; i < numPages; i++) {
         var pagenum = i + 1;
         var pagenum_padded = pagenum.toLocaleString('en-GB', {minimumIntegerDigits:4,useGrouping:false});
         //for all links
         for(var j = 0; j < links.pagedownloads.length; j++) {
-            var link = links.pagedownloads[j];
-            var url = link
+            var plink = links.pagedownloads[j];
+            var purl = plink
                 .replace(/\{id\}/g, bookToDownload)
                 .replace(/\{page\}/g, pagenum_padded);
             //download file
-            if(fast) download(url);
-            else await download(url);
+            if(fast) download(purl);
+            else await download(purl);
         }
     }
 }
 
-dodl(false);
+dodl(false, true, true);
