@@ -7,6 +7,8 @@ var bookInfo = require("./books.json");
 var cookies = fs.readFileSync("./cookies.txt").toString().trim();
 var links = require("./links.json");
 
+var config = require("./config.json");
+
 if(!fs.existsSync(path.join(__dirname, "downloads/"))) fs.mkdirSync(path.join(__dirname, "downloads/"));
 
 var bookToDownload = process.argv.slice(2).join("");
@@ -102,4 +104,4 @@ async function dodl(fast, titles, pages) {
     }
 }
 
-dodl(false, true, true);
+dodl(config.fastDownload, config.downloadBookContent, config.downloadPageContent);

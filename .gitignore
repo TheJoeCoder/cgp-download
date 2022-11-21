@@ -1,6 +1,9 @@
-downloads/
-converted/
 node_modules/
-cookies.txt
+converted/
+db/
+downloads/
 html/
 pdf/
+cookies.txt
+downloads.txt
+config.json

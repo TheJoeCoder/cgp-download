@@ -1,0 +1,13 @@
+{
+    "//1": "You probably shouldn't change these settings unless you know what you're doing.",
+    "//2": "---",
+
+    "//3": "fastDownload doesn't wait for a download to complete before moving on - causes timeouts & ratelimiting.",
+    "fastDownload": false,
+
+    "//4": "downloadBookContent downloads content to do with showing the book (i.e loader, html, styles, front cover, etc)",
+    "downloadBookContent": true,
+    
+    "//5": "downloadPageContent downloads all versions and layers of each page.",
+    "downloadPageContent": true
+}
