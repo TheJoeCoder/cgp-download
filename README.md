@@ -1,4 +1,9 @@
 # CGP Download
+## Hey!
+If you're reading this then you may want to use [cgp-smarter-download](https://github.com/TheJoeCoder/cgp-smarter-download) instead. It supports creating PDF files instead of mirroring every file, and is a lot smarter at how it downloads files (it's way more efficient).
+
+Chances are I won't support this older repo as much as the newer one... the code's in such a state and I don't want to look at it ever again.
+
 ## Disclaimer
 This software is provided for the sole purpose of personal use of offline and private copies of the CGP books. Do not distribute any copyrighted files downloaded by this program. All property downloaded remains the copyright of CGP or the respected author. The author of this software does not condone copyright infringement and will not take any responsibility for any actions of any user of this software. Please note that you can only download books you already own on the CGP Online platform with this software. Books which you do not own cannot be downloaded.
 
